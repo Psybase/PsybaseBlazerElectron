@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PsybaseBlazerElectron.Data;
+using PsybaseBlazerElectron.ServicesPB;
 
 namespace PsybaseBlazerElectron
 {
@@ -30,6 +31,10 @@ namespace PsybaseBlazerElectron
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            //add service guid as singleton service - hold while app open untill closed
+            services.AddSingleton<RandomService>();
+            services.AddTransient<RandomServiceChange>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
