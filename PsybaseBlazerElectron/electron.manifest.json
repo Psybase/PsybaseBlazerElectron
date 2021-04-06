@@ -9,7 +9,7 @@
   "build": {
     "appId": "com.PsybaseBlazerElectron.app",
     "productName": "PsybaseBlazerElectron",
-    "copyright": "Copyright © 2020",
+    "copyright": "Copyright © 2021",
     "buildVersion": "1.0.0",
     "compression": "maximum",
     "directories": {
